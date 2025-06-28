@@ -3,6 +3,7 @@ import { ref, watch, computed } from 'vue';
 
 import SalesRangeDatePicker from '@/widgets/sales/SalesRangeDatePicker.vue';
 import SalesTable from '@/widgets/sales/SalesTable.vue';
+import SalesChart from '@/widgets/sales/SalesChart.vue';
 import TabView from '@/shared/ui/TabView.vue';
 
 import { useSales } from '@/entities/sales/model/useSales';
@@ -38,7 +39,7 @@ watch(data, () => {
             </div>
         </div>
         <SalesTable v-if="activeTab === 'table'" :data="data?.data" :isLoading="isLoading" :isError="isError" />
-        <div v-else class="bg-red-400 w-full h-10"></div>
+        <SalesChart v-else :data="data?.data" :isLoading="isLoading" :isError="isError" />
     </div>
 </template>
 

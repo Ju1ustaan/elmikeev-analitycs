@@ -3,6 +3,7 @@ import { ref, watch, computed } from 'vue';
 
 import SalesRangeDatePicker from '@/widgets/sales/SalesRangeDatePicker.vue';
 import IncomesTable from '@/widgets/incomes/IncomesTable.vue';
+import IncomesChart from '@/widgets/incomes/IncomesChart.vue';
 import TabView from '@/shared/ui/TabView.vue';
 
 import { useIncomes } from '@/entities/incomes/model/useIncomes';
@@ -38,7 +39,7 @@ watch(data, () => {
             </div>
         </div>
         <IncomesTable v-if="activeTab === 'table'" :data="data?.data" :isLoading="isLoading" :isError="isError" />
-        <div v-else class="bg-red-400 w-full h-10"></div>
+        <IncomesChart v-else :data="data?.data" :isLoading="isLoading" :isError="isError" />
     </div>
 </template>
 

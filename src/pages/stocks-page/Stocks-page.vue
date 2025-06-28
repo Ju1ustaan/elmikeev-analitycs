@@ -3,6 +3,7 @@ import { ref, watch, computed } from 'vue';
 
 import StocksFilter from '@/widgets/stocks/StocksFilter.vue';
 import StocksTable from '@/widgets/stocks/StocksTable.vue';
+import StockChart from '@/widgets/stocks/StockChart.vue';
 import TabView from '@/shared/ui/TabView.vue';
 
 import { useStocks } from '@/entities/stocks/model/useStocks';
@@ -37,7 +38,7 @@ watch(data, () => {
             </div>
         </div>
         <StocksTable v-if="activeTab === 'table'" :data="data?.data" :isLoading="isLoading" :isError="isError" />
-        <div v-else class="bg-red-400 w-full h-10"></div>
+        <StockChart v-else :data="data?.data" :isLoading="isLoading" :isError="isError" />
     </div>
 </template>
 
