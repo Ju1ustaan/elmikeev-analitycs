@@ -3,12 +3,7 @@ import { navbarModel } from '../model'
 </script>
 
 <template>
-    <!-- <nav class="flex h-fit px-10 py-4 rounded-full bg-blue-600 fixed w-fit top-5 left-10 shadow-2xl">
-        <RouterLink v-for="link in navbarModel" :to="link.to">
-            {{ link.title }}
-        </RouterLink>
-    </nav> -->
-     <nav class="flex flex-col bg-blue-300 rounded overflow-hidden sticky top-0 left-0 h-screen group p-2">
+     <nav class="flex flex-col bg-blue-300 rounded overflow-hidden fixed z-120 w-full md:sticky top-0 -left-full duration-300  h-screen group p-2">
     <RouterLink
       v-for="link in navbarModel"
       :key="link.to"

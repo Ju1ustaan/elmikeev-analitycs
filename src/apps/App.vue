@@ -6,13 +6,13 @@ import Contacts from '@/shared/ui/Contacts.vue';
 
 <template>
     <div class="grid grid-cols-12 gap-5">
-      <div class="col-span-12 py-5 px-6 bg-blue-800">
+      <div class="fixed z-10 md:static col-span-12 w-full py-5 px-6 bg-blue-800">
         <Contacts/>
       </div>
-      <div class="col-span-2">
+      <div class="col-span-1 md:col-span-2">
         <Navbar/>
       </div>
-      <div class="col-span-10">
+      <div class="col-span-12 pt-20 md:pt-0 md:col-span-10">
       <RouterView />
       </div>
     </div>

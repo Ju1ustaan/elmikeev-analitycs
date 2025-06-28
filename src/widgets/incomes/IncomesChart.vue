@@ -11,6 +11,7 @@ import {
   LinearScale,
 } from 'chart.js'
 import type { Income } from '@/entities/incomes/model/types'
+import BarChartSkeleton from '@/shared/ui/BarChartSkeleton.vue'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
@@ -52,9 +53,8 @@ const chartOptions = {
 </script>
 
 <template>
-  <div v-if="data?.length" class="w-full h-[400px]">
-    <Bar :data="chartData" :options="chartOptions" />
-  </div>
-  <p v-else-if="isLoading">Загрузка графика...</p>
-  <p v-else-if="isError">Ошибка загрузки графика</p>
+  <div class="w-full h-[400px] bg-blue-300">
+    <BarChartSkeleton  v-if="isLoading || isError" :isError="isError" :isLoading="isLoading" :chartOption="chartOptions"/>
+    <Bar v-else :data="chartData" :options="chartOptions" />
+  </div> 
 </template>

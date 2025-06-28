@@ -32,12 +32,10 @@ watch(data, () => {
 
 <template>
     <div class=" min-h-screen w-full">
-        <div class="flex justify-between">
-            <div class="flex gap-3 items-center">
+            <div class="flex gap-3 items-end md:items-center">
                 <TabView v-model="activeTab" />
                 <SalesRangeDatePicker />
             </div>
-        </div>
         <IncomesTable v-if="activeTab === 'table'" :data="data?.data" :isLoading="isLoading" :isError="isError" />
         <IncomesChart v-else :data="data?.data" :isLoading="isLoading" :isError="isError" />
     </div>

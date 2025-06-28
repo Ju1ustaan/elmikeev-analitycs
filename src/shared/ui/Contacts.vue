@@ -1,8 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="flex items-center gap-5">
-        <a href="https://t.me/JulustaanL" target="_blank" rel="noopener noreferrer" title="Telegram">
+    <div class="flex flex-col items-center w-full gap-5">
+        <div class="flex items-start w-full md:items-center gap-5">
+                    <a href="https://t.me/JulustaanL" target="_blank" rel="noopener noreferrer" title="Telegram">
             <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_13_17)">
                     <path
@@ -53,10 +54,10 @@
 
 
         </a>
+        </div>
+        <h1 class="hidden md:block text-5xl text-white"><span class="!font-bold text-blue-300">Frontend</span> - Developer</h1>
 
-        <h1 class="text-5xl text-white"><span class="!font-bold text-blue-300">Frontend</span> - Developer</h1>
-
-        <p class="text-3xl text-white pl-5 py-2 border-l-2">Лугинов <span class="!font-bold text-blue-300">Дьулустаан</span></p>
+        <p class="hidden md:block text-3xl text-white pl-5 py-2 border-l-2">Лугинов <span class="!font-bold text-blue-300">Дьулустаан</span></p>
     </div>
 </template>
 

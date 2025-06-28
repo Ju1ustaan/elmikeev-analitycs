@@ -5,7 +5,8 @@ const dateStore = useRangeDateStore()
 </script>
 
 <template>
-  <div class="flex gap-4 items-center relative">
+  <div class="flex flex-col gap-3 md:flex-row">
+    <div class="flex gap-4 items-center relative">
     <label for="date" class="absolute top-0 -left-2 -translate-y-1/2 bg-white px-2 text-sm text-gray-700 font-semibold">От</label>
     <input
       id="date"
@@ -24,5 +25,6 @@ const dateStore = useRangeDateStore()
       v-model="dateStore.endDate"
       @change="dateStore.changeEndDate(dateStore.endDate)"
     />
+  </div>
   </div>
 </template>

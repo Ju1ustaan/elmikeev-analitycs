@@ -30,7 +30,7 @@ const changePage = (page: any) => {
 </script>
 
 <template>
-    <div class="flex items-center justify-between gap-1 p-3 bg-blue-300 ">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 p-3 bg-blue-300 ">
         <h5 class="text-3xl !font-bold text-gray-700">{{route.name}}</h5>
         <div class="flex items-center justify-end gap-1">
             <p class="px-3 py-2 border-1 border-gray-300 rounded-md !mr-5 relative">
